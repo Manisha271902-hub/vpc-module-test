@@ -2,9 +2,33 @@ variable "vpc_cidr" {
   default = "10.0.0.0/16"
 }
 
-# variable "public_sub_cidrs" {
-#     default= ["10.0.1.0/24","10.0.2.0/24"]
+
+variable "project_name" {
+  default = "Roboshop"
+}
+
+
+variable "environment" {
+  default = "Dev"
+}
+
+variable "vpc_tags" {
+  default = {
+    my_vpc_name= "Roboshop_VPC done by manu"
+    }
+}
+
+#mofule lo optional undhi
+# variable "igw-tags" {
+#   default = {
+#     Name = "IGW created by terraform"
+#   }
 # }
+
+
+variable "public_sub_cidrs" {
+    default= ["10.0.1.0/24","10.0.2.0/24"]
+}
 
 # variable "private_sub_cidrs" {
 #     default= ["10.0.11.0/24","10.0.12.0/24"]
@@ -26,18 +50,5 @@ variable "vpc_cidr" {
 #   type=map
 # }
 
-# variable "igw-tags" {
-#   default = {
-#     Name = "IGW created by terraform"
-#   }
-# }
 
-# variable "common-tags-vpc" {
-#   type=map 
-#   default = {
-#     Name = "VPC_roboshop"
-#     project = "Roboshop"
-#     Terraform = true
 
-#   }
-# }
